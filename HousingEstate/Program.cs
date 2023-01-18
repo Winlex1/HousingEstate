@@ -13,12 +13,19 @@ namespace HousingEstate
             Person person3 = new Person("Alex", "Neviem", 122677);
 
             Flat flat = new Flat(1, 2, 1);
+
             Console.WriteLine(person.ToString());
+            Console.WriteLine("-");
+
             flat.AddHabitant(person2);
             flat.AddHabitant(person3);
             flat.AddHabitant(person1);
-            flat.PrintList();
+            flat.AddHabitant(person);
+
             Console.WriteLine(flat.ToString());
+
+            Console.WriteLine(flat.GetInfoAboutAllHabitants());
+
         }
     }
 }

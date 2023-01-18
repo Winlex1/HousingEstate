@@ -10,7 +10,7 @@ namespace HousingEstate
         private int area;
         private int numberOfapartments;
         public List<Person> people = new List<Person>();
-        public int FN
+        public int FlatNum
         {
             get { return flatnum; }
             set { this.flatnum = value; }
@@ -23,7 +23,7 @@ namespace HousingEstate
                 this.area = value;
             }
         }
-        public int NOA
+        public int NumberOfapartments
         {
             get { return numberOfapartments; }
             set { numberOfapartments = value; }
@@ -38,12 +38,15 @@ namespace HousingEstate
         {
             people.Add(habitant);
         }
-        public void PrintList()
+        public string GetInfoAboutAllHabitants()
         {
+            string s = "";
             foreach (Person v in people)
             {
-                Console.WriteLine(v);
+                s += v + "\n";
             }
+
+            return s;
         }
         public override string ToString()
         {
